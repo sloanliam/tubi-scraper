@@ -18,3 +18,7 @@ Scrapes all genres in Tubi and populates a MySQL database.
 
     ```
 4. run the main.py file with ```python main.py```
+
+## If the above doesn't work:
+
+idk lol i made it for myself
