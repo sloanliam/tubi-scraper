@@ -3,7 +3,6 @@ attrs==22.1.0
 certifi==2022.12.7
 cffi==1.15.1
 exceptiongroup==1.0.4
-flake8==6.0.0
 h11==0.14.0
 idna==3.4
 mccabe==0.7.0
