@@ -1,0 +1,16 @@
+{
+    "homeUrl": "https://tubitv.com/home/",
+    "categoryUrl": "https://tubitv.com/category/",
+    "classNames": {
+        "entry": "web-content-tile__content-info",
+        "title": "web-content-tile__title",
+        "duration": "web-content-tile__duration",
+        "year": "web-content-tile__year",
+        "rating": "web-rating__content",
+        "genres": "PHbWo",
+        "sideBar": "_SoAG"
+    },
+    "x_paths": {
+
+    }
+}
