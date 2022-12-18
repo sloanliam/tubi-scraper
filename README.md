@@ -2,6 +2,13 @@
 
 Scrapes all genres in Tubi and populates a MySQL database.
 
+## Uses
+
+As for the specific use, I'm not fully sure. I think some money could be made for anyone
+willing to take the time to turn this into a webservice and offer it as a Tubi api.
+I don't have the time, but my original thoughts on that we're to use Docker Compose and FastAPI
+to pull results and serve them. Idk tho.
+
 ## Setup
 
 1. Install dependencies with ```pip install -r requirements.txt``` OR run 'setup.bat'
