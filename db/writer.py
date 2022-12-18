@@ -11,8 +11,34 @@ class DbWriter:
                 host=self.config['host'],
                 user=self.config['user'],
                 password=self.config['password'],
-                database=self.config['database']
             )
+
+    def setup_database(self):
+        cursor = self.db.cursor()
+
+        try:
+            cursor.execute(f"CREATE DATABASE {self.config['database']}")
+            self.db.database = self.config['database']
+            print("Created database.")
+        except:
+            print("Database already present.")
+            self.db.database = self.config['database']
+
+        try:
+            cursor.execute("""
+                            CREATE TABLE movies (
+                                id INT PRIMARY KEY AUTO_INCREMENT,
+                                title VARCHAR(255),
+                                duration VARCHAR(255),
+                                year VARCHAR(255),
+                                rating VARCHAR(255),
+                                category VARCHAR(255)
+                            );
+                        """)
+            print("Created table.")
+        except:
+            print("Table already present.")
+
 
     def write_movie(self, movie):
         if movie is not None:
@@ -37,6 +63,6 @@ class DbWriter:
         else:
             print(f'Error writing.')
 
-        
+
 
 

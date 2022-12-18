@@ -9,7 +9,8 @@ def populate_database():
     genre_list = []
     tubi_scraper = TubiScraper()
     db_writer = DbWriter()
-    content_list = []
+
+    db_writer.setup_database()
 
     with open('./configs/tubi_genre_list.json') as genre_list_file:
         genre_list = json.load(genre_list_file)
