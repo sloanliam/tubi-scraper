@@ -15,21 +15,27 @@ class DbWriter:
             )
 
     def write_movie(self, movie):
-        statement = 'INSERT INTO movies (title, duration, year, rating) VALUES (%s, %s, %s, %s)'
-        values = (movie.title, movie.duration, movie.year, movie.rating)
+        if movie is not None:
+            try:
+                statement = 'INSERT INTO movies (title, duration, year, rating, category) VALUES (%s, %s, %s, %s, %s)'
+                values = (movie.title, movie.duration, movie.year, movie.rating, movie.category)
 
-        cursor = self.db.cursor()
+                cursor = self.db.cursor()
 
-        find_statment = f'SELECT * FROM movies WHERE title="{movie.title}" AND year="{movie.year}";'
-        cursor.execute(find_statment)
+                find_statment = f'SELECT * FROM movies WHERE title="{movie.title}" AND year="{movie.year}";'
+                cursor.execute(find_statment)
 
-        result = cursor.fetchall()
+                result = cursor.fetchall()
 
-        if len(result) == 0:
-            cursor.execute(statement, values)
-            self.db.commit()
+                if len(result) == 0:
+                    cursor.execute(statement, values)
+                    self.db.commit()
+                else:
+                    print("Duplicate movie found... not writing to database.")
+            except:
+                print(f'Could not write {movie.title}.')
         else:
-            print("Duplicate movie found... not writing to database.")
+            print(f'Error writing.')
 
         
 
