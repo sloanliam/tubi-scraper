@@ -21,4 +21,6 @@ Scrapes all genres in Tubi and populates a MySQL database.
 
 ## If the above doesn't work:
 
-idk lol i made it for myself
+idc lol i made it for myself
+
+ok, i kind of care.
