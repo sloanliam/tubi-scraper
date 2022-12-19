@@ -11,6 +11,11 @@ to pull results and serve them. Idk tho.
 
 ## Setup
 
+Before program setup, msedge driver should be set in PATH. Follow the below for
+instructions:
+
+https://www.ibm.com/docs/en/rtw/9.0.1?topic=rwut-running-web-ui-tests-in-microsoft-edge-browser
+
 1. Install dependencies with ```pip install -r requirements.txt``` OR run 'setup.bat'
 2. Install MySQL, and create a new file in the configs directory called "db.json".
 3. Populate the db.json file:
